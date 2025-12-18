@@ -1,0 +1,128 @@
+.center-wrapper {
+  /* height: 100vh;
+  width: 100vw; */
+  min-height: 100vh;
+  display: flex;
+  background-color: lightblue;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-text {
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.empty-component {
+  padding: 80px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 10px #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-left: 30px;
+}
+
+.comming-soon-text {
+  height: 100vh;
+  width: 100vw;
+  background-color: antiquewhite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-bar {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-logo {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  padding-bottom: 4px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+.nav-links .active {
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  padding: 20px;
+}
+
+.product-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.product-card:not(.inactive):hover {
+  transform: translateY(-6px);
+}
+
+.product-card-title {
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.desc {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 10px;
+}
+
+
+.product-card.inactive {
+  opacity: 0.35;
+}
+
+.product-card.inactive::after {
+  content: "out of stock";
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(0, 0, 0, 0.55)
+  );
+  
+}
