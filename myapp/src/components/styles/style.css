@@ -27,6 +27,8 @@
   justify-content: center;
   font-size: 18px;
   margin-left: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .comming-soon-text {
@@ -106,8 +108,20 @@
 .desc {
   font-size: 14px;
   color: #4b5563;
-  margin-bottom: 10px;
+  line-height: 1.4;
 }
+
+.read-more {
+  color: #2563eb;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
 
 
 .product-card.inactive {
@@ -125,4 +139,225 @@
     rgba(0, 0, 0, 0.55)
   );
   
+}
+/* Button container */
+.product-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+/* Common button styles */
+.product-actions button {
+  flex: 1;
+  padding: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+/* Update button */
+.edit-btn {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.edit-btn:hover {
+  background: #1e40af;
+  transform: translateY(-1px);
+}
+
+/* Delete button */
+.delete-btn {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+}
+
+/* Disabled state (for inactive products) */
+.product-card.inactive .product-actions button {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+/* Page background */
+.create-product-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0e7ff, #f3f4f6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Form container */
+.product-form {
+  width: 420px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Title */
+.product-form h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #111827;
+}
+
+/* Input group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+/* Inputs */
+.form-group input,
+.form-group textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus state */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* Textarea */
+.form-group textarea {
+  resize: none;
+  height: 80px;
+}
+
+/* Submit button */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background: #1e40af;
+  transform: translateY(-2px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+/* Page wrapper */
+.update-product-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ecfeff, #f3f4f6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Shared form container */
+.product-form {
+  width: 420px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading */
+.product-form h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #111827;
+}
+
+/* Input grouping */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+/* Inputs */
+.form-group input,
+.form-group textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
+}
+
+/* Textarea */
+.form-group textarea {
+  resize: none;
+  height: 80px;
+}
+
+/* Submit button */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Update-specific color */
+.update-btn {
+  background: #0ea5e9;
+  color: #ffffff;
+}
+
+.update-btn:hover {
+  background: #0284c7;
+  transform: translateY(-2px);
+}
+
+.update-btn:active {
+  transform: translateY(0);
 }

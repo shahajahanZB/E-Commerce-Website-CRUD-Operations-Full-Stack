@@ -6,6 +6,9 @@ const ProductsPage=()=>
         <>
 
         <div>
+            <header style={{background: "linear-gradient(90deg, #1e3a8a, #2563eb)"}}>
+                <h1 style={{color: "#ffffff", padding: "16px", textAlign: "center", margin: "0"}}>Products Page</h1>
+            </header>
                 <main>
                 <ProductList/>
 
